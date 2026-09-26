@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main() {
+    int N=242;
+    int notes[]={100,50,20,10,5,2,1};
+    int size=sizeof(notes)/sizeof(int);
+int minNotes=0;
+int i;
+   for(i=0;i<size;i++)
+   {
+    int count=N/notes[i];
+    N=N%notes[i];
+    minNotes=minNotes+count;
+ }
+ printf("MinNotes are:%d",minNotes);
+return 0;
+
+}
